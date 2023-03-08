@@ -1,0 +1,3 @@
+#857164 -> light brown
+#41332a -> brown
+#b1a196 -> beige
