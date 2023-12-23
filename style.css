@@ -3,110 +3,185 @@
   margin: 0;
 }
 
-body{
-    background-color:#857164 ;
+body {
+  background-color: #857164;
 }
 
 header {
   display: flex;
   overflow: hidden;
-    background-color:#41332a;
-    -webkit-text-fill-color: #ffffff;
-    padding: 1%;
-    text-align: left;
-    width: 100%;
-    height: 3vh;
-    min-height: 3vh;
-  }
-
-  footer{
-    background-color:#41332a;
-    -webkit-text-fill-color: #ffffff;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2vh;
-  }
-
-  h2 {
-    padding-top: 2%;
-    font-size: 175%;
+  background-color: #41332a;
+  -webkit-text-fill-color: #ffffff;
+  padding: 1%;
+  text-align: left;
+  width: 100%;
+  height: 3vh;
+  min-height: 3vh;
+}
+/*
+header img {
+  float: left;
+  padding-right: 2%;  
+  cursor: pointer;
+}
+*/
+footer {
+  background-color: #41332a;
+  -webkit-text-fill-color: #ffffff;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2vh;
 }
 
-  h4 {
-    padding: 2%;
-    font-size: 125%;
+h2 {
+  padding-top: 2%;
+  font-size: 175%;
 }
 
-  ul li a {
-    color: black;
-    list-style: none;
-    margin-left: 1%;
-    font-size: 105%;
-    padding: 2%;
-  }
+h4 {
+  padding: 2%;
+  font-size: 125%;
+}
 
-  form input {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
+ul li a {
+  color: black;
+  list-style: none;
+  margin-left: 1%;
+  font-size: 120%;
+  padding: 2%;
+}
 
-  form h4 {
-    padding: 2%;
-  }
+form input {
+  margin-left: 2%;
+  margin-right: 2%;
+  /* ajuster le width selon la taille de la fenetre pour garder le <p> sur la meme ligne */
+}
 
-  .menu {
-    position: fixed;
-    overflow: hidden;
-    top: 7vh;
-    width: 15%;
-    height: 100%;
-    max-width: 20%;
-    float: left;
-    padding-left: 1%;
-    background-color: #b1a196;
-   
-    
-  }
-  
-  .menu a:hover {
-    color: #ffffff;
-  }
+form h4 {
+  padding: 2%;
+}
 
-  .single-drink {
-    display: flex;
-    align-items: center;   
-    max-width: 85%;
-    flex-direction: column;
-  }
+#clear-button {
+  display: inline-block;
+  align-self: center;
+  color: white;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border-radius: 50%;
+}
 
-  .single-drink .imgbox {
-    display: flex;
-    flex-direction: row;
-  }
+#clear-button:hover {
+  cursor: pointer;
+}
 
-  .drink-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-.multiple-drinks {
+.menu {
+  position: fixed;
+  overflow: hidden;
+  display: block;
+  float: left;
+  width: 15%;
+  height: 100%;
+  padding-left: 1%;
+  background-color: #b1a196;
+}
+
+.menu li:hover {
+  background-color: #41332a;
+  color: #ffffff
+}
+
+.menu a:hover {
+  color: #ffffff
+}
+
+.drink-recipe {
   display: flex;
-  flex-flow: row wrap;
-  width: 85vw;
-  max-height: 95vh;
+  position: fixed;
+  max-width: 85%;
+  flex-direction: column;
   margin-left: 18%;
 }
 
-.item {
+.drink-recipe h2 {
+  padding: 1%;
+}
+
+.drink-recipe .imgbox {
+  display: flex;
+  flex-direction: row;
   padding: 2%;
+}
+
+.drink-recipe img {
+  height: 180px;
+  width: 180px;
+  border-radius: 25px;
+  border: 3px solid #ccc;
+  background: #fff;
+
+}
+
+.drink-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.drink-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 85vw;
+  margin-left: 15%;
+}
+
+.item {
+  padding: 4%;
+}
+
+.item:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1)
+}
+
+.item p {
   text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+
 }
 
 .item img {
-  height: 100px;
-  width: 100px;
-
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  transition: box-shadow .3s;
+  margin: 35px;
+  border-radius: 25px;
+  border: 3px solid #ccc;
+  background: #fff;
+  float: left;
 }
+
+.item img:hover {
+  box-shadow: 0 0 25px rgba(33, 33, 33, .2);
+}
+
+.meteo p {
+  display: inline-block;
+  padding: 1%;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.meteo img {
+  display: inline-block;
+  padding: 2%;
+}
+
